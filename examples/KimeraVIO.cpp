@@ -47,6 +47,8 @@ int main(int argc, char* argv[]) {
   google::InitGoogleLogging(argv[0]);
 
   // Parse VIO parameters from gflags.
+  std::cout<<"111"<<std::endl;
+  std::cout<<FLAGS_params_folder_path<<std::endl;
   VIO::VioParams vio_params(FLAGS_params_folder_path);
 
   // Build dataset parser.
