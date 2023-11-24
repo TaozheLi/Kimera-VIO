@@ -42,7 +42,9 @@ DEFINE_string(
 
 int main(int argc, char* argv[]) {
   // Initialize Google's flags library.
+  std::cout<<"taozheli start to parse command line flags"<<std::endl;
   google::ParseCommandLineFlags(&argc, &argv, true);
+  std::cout<<"taozhe li start to initgoogle logging"<<std::endl;
   // Initialize Google's logging library.
   google::InitGoogleLogging(argv[0]);
 
