@@ -52,6 +52,7 @@ int main(int argc, char* argv[]) {
   std::cout<<"111"<<std::endl;
   std::cout<<FLAGS_params_folder_path<<std::endl;
   std::string taozheli_params_folder_path = "/home/rushmian/VNAV-labs/lab9/kimera_params";
+  std::cout<<taozheli_params_folder_path<<std::endl;
   VIO::VioParams vio_params(taozheli_params_folder_path);
 
   // Build dataset parser.
