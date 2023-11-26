@@ -61,7 +61,7 @@ int main(int argc, char* argv[]) {
   std::cout<<"current dir: "<<path<<std::endl;
   std::string s(path);
   std::string taozheli_params_folder_path_2 = s + "/params/Euroc";
-  DIR * d = opendir(s);
+  DIR * d = opendir(path);
   if(d == NULL){
     std::cout<<"d is null"<<std::endl;
   }
