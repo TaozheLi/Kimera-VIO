@@ -70,7 +70,7 @@ int main(int argc, char* argv[]) {
     std::puts(entry->d_name);
   }
   closedir(d);
-  VIO::VioParams vio_params(taozheli_params_folder_path_2);
+  VIO::VioParams vio_params(FLAGS_params_folder_path);
 
   // Build dataset parser.
   VIO::DataProviderInterface::Ptr dataset_parser = nullptr;
