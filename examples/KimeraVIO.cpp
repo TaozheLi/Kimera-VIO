@@ -70,6 +70,7 @@ int main(int argc, char* argv[]) {
     std::puts(entry->d_name);
   }
   closedir(d);
+  FLAGS_params_folder_path = "/kimera_params";
   VIO::VioParams vio_params(FLAGS_params_folder_path);
 
   // Build dataset parser.
