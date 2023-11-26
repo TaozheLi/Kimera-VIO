@@ -76,9 +76,8 @@ class YamlParser {
  private:
   void openFile(const std::string& filepath, cv::FileStorage* fs) const {
     CHECK(!filepath.empty()) << "Empty filepath!";
-   std::string filepath_taozheli = "/home/rushmian/datasets/vnav/MH_01_easy/mav0/state_groundtruth_estimate0/sensor.yaml";
     try {
-      CHECK_NOTNULL(fs)->open(filepath_taozheli, cv::FileStorage::READ);
+      CHECK_NOTNULL(fs)->open(filepath, cv::FileStorage::READ);
     } catch (cv::Exception& e) {
       LOG(FATAL) << "Cannot open file: " << filepath << '\n'
                  << "OpenCV error code: " << e.msg;
