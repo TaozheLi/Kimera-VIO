@@ -22,6 +22,7 @@
 #include <utility>
 #include <unistd.h>
 #include <iostream>
+#include <dirent.h>
 
 #include "kimera-vio/dataprovider/EurocDataProvider.h"
 #include "kimera-vio/dataprovider/KittiDataProvider.h"
@@ -41,7 +42,7 @@ DEFINE_string(
     params_folder_path,
     "../params/Euroc",
     "Path to the folder containing the yaml files with the VIO parameters.");
-
+using namespace std;
 int main(int argc, char* argv[]) {
   // Initialize Google's flags library.
   std::cout<<"taozheli start to parse command line flags"<<std::endl;
@@ -60,6 +61,15 @@ int main(int argc, char* argv[]) {
   std::cout<<"current dir: "<<path<<std::endl;
   std::string s(path);
   std::string taozheli_params_folder_path_2 = s + "/params/Euroc";
+  DIR * d = opendir(s);
+  if(d == NULL){
+    std::cout<<"d is null"<<std::endl;
+  }
+  struct dirent * entry;
+  while( (entry=readdir(d)) != NULL){
+    std::puts(entry->d_name);
+  }
+  closedir(d);
   VIO::VioParams vio_params(taozheli_params_folder_path_2);
 
   // Build dataset parser.
