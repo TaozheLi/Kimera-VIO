@@ -56,7 +56,7 @@ int main(int argc, char* argv[]) {
   std::string taozheli_params_folder_path = "../kimera_params/";
   std::cout<<taozheli_params_folder_path<<std::endl;
   char * path;
-  path = std::get_current_dir_name();
+  path = get_current_dir_name();
   std::cout<<"current dir: "<<path<<std::endl;
   VIO::VioParams vio_params(taozheli_params_folder_path);
 
