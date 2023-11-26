@@ -58,7 +58,8 @@ int main(int argc, char* argv[]) {
   char * path;
   path = get_current_dir_name();
   std::cout<<"current dir: "<<path<<std::endl;
-  std::string taozheli_params_folder_path_2 = path + "/params/Euroc";
+  std::string s(path);
+  std::string taozheli_params_folder_path_2 = s + "/params/Euroc";
   VIO::VioParams vio_params(taozheli_params_folder_path_2);
 
   // Build dataset parser.
